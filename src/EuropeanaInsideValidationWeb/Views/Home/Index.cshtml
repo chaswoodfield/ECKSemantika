@@ -1,0 +1,61 @@
+﻿@using Semantika.EuropeanaInside.Eck.Validation;
+@{
+    ViewBag.Title = "Validator";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Europeana validator</h2>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Warning!</strong>  @ViewBag.Message
+    </div>
+}
+else
+{
+    EckValidationResult validationResult = ViewBag.ValidationResult as EckValidationResult;
+    if (validationResult != null)
+    {
+        if (validationResult.IsValid)
+        {
+            <div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Warning!</strong>  @validationResult.Message
+            </div>
+        }
+        else
+        {
+            foreach (var brokenRule in validationResult.BrokenRules)
+            {
+                if (brokenRule.Severity == SeverityType.Warning)
+                {
+                    <div class="alert alert-info">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Warning!</strong>  @brokenRule.Message
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-error">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Error!</strong>  @brokenRule.Message
+                    </div>
+                }
+            }
+        }
+    }
+}
+
+<form method="POST">
+
+    <fieldset>
+        <br/>
+        <p>
+            Paste your xml document
+        </p>
+        <textarea class="input-block-level" rows="10" name="xmldoc"></textarea>
+        <input type="submit" class="btn btn-success pull-right" value="Validate Xml" />
+    </fieldset>
+</form>

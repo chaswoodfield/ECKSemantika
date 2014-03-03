@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Semantika.EuropeanaInside.Eck.Validation.BrokenRule">
+    <Position X="3.75" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAIAQAAAA=</HashCode>
+      <FileName>Validation\BrokenRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Semantika.EuropeanaInside.Eck.Validation.CachedSchemas">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAgAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validation\CachedSchemas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Semantika.EuropeanaInside.Eck.Validation.EckValidationResult">
+    <Position X="3.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAoAAAAAA=</HashCode>
+      <FileName>Validation\EckValidationResult.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="BrokenRules" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Semantika.EuropeanaInside.Eck.Validation.MediaReferenceValidator">
+    <Position X="6.25" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validation\MediaReferenceValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Semantika.EuropeanaInside.Eck.Validation.XmlValidator">
+    <Position X="8.5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validation\XmlValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Semantika.EuropeanaInside.Eck.Validation.XsdSchemas">
+    <Position X="5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Validation\XsdSchemas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Semantika.EuropeanaInside.Eck.ValidationService">
+    <Position X="0.75" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAE=</HashCode>
+      <FileName>ValidationService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.96" Collapsed="true" />
+  </Class>
+  <Interface Name="Semantika.EuropeanaInside.Eck.Validation.IValidationService">
+    <Position X="1" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAE=</HashCode>
+      <FileName>Validation\IValidationService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Semantika.EuropeanaInside.Eck.Validation.SeverityType">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validation\SeverityType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Semantika.EuropeanaInside.Eck.Validation.ValidationProfile">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Validation\ValidationProfile.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

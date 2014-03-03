@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Test Ws</h2>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+       
+    });
+
+
+    function testWs() {
+
+        try {
+            var pd = { InstitutionUrl : "Fred", RecordType : "2", AccessionNumber: "17268" };
+
+            $.ajax({
+                type: "POST",
+                contentType: 'application/json',
+                url: "/pid/Generate",
+                dataType : "json",
+                data: '{pidData:{}}',
+                success: function (msg) {
+                    alert("success");
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    alert("error: " + errorThrown);
+                }
+            });
+        } catch (e) {
+            alert(e.message);
+        }
+       
+    }
+
+</script>
+
+<a href="javascript:testWs();">Test</a>
+
+<form method="post" action="/pid/generate">
+    <input type="text" name="InstitutionUrl" /><br />
+    <input type="text" name="RecordType" /><br />
+    <input type="text" name="AccessionNumber" /><br />
+    <input type="submit" />
+</form>

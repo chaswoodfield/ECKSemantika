@@ -1,0 +1,79 @@
+﻿<script type="text/javascript">
+    var currentNavbarClass = "navbar-c";
+    var messages = ["navbar-a", "navbar-b", "navbar-c", "navbar-d", "navbar-e", "navbar-f", "navbar-g", "navbar-h", "navbar-i", "navbar-j", "navbar-k", "navbar-l", "navbar-m", "navbar-n", "navbar-o", "navbar-p", "navbar-q", "navbar-r", "navbar-s", "navbar-u", "navbar-v", "navbar-w", "navbar-x", "navbar-y", "navbar-z"];
+    var intervalForChangeClass = 1000;
+    var tid = "";
+    
+    function changeNavbarClass() {
+
+        $(".navbar").removeClass(currentNavbarClass);
+        currentNavbarClass = messages[Math.floor(Math.random() * messages.length)];
+        $(".navbar").addClass(currentNavbarClass);
+
+    }
+
+    $(document).ready(function() {
+        //try {
+        //    tid = setTimeout(mycode, intervalForChangeClass);
+        //}catch(e) {
+        //    alert(e.message);
+        //}
+    });
+
+   
+    function mycode() {
+        changeNavbarClass();
+        tid = setTimeout(mycode, intervalForChangeClass); 
+    }
+    function abortTimer() {
+        clearTimeout(tid);
+    }
+</script>
+
+<div class="navbar navbar-c navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="#">Europeana Inside</a>
+					<div class="nav-collapse collapse navbar-responsive-collapse">
+						<ul class="nav">
+							<li class="active"><a href="#"><i class="icon-large icon-home"></i></a></li>
+							<li><a href="mailto:info@semantika.si"><i class="icon-large icon-envelope"></i></a></li>
+							<li><a href="http://www.semantika.si"><i class="icon-large icon-globe"></i></a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Search options<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">All documents</a></li>
+									<li><a href="#">Collections</a></li>
+									<li><a href="#">Exhibitions</a></li>
+									<li class="divider"></li>
+									<li class="nav-header">Settings</li>
+									<li><a href="#">Index settings</a></li>
+									<li><a href="#">Translation settins</a></li>
+								</ul>
+							</li>
+						</ul>
+						<form class="navbar-search pull-left" action="">
+							<input type="text" class="search-query span3">
+						</form>
+						<ul class="nav pull-right">
+							<li><a href="#">Info point</a></li>
+							<li class="divider-vertical"></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">@User.Identity.Name<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">My account</a></li>
+									<li><a href="#">Settings</a></li>
+									<li class="divider"></li>
+									<li><a href="@Url.Action("Logout","Account")">Logout</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
